@@ -1,3 +1,6 @@
 [submodule "minikube-react"]
 	path = minikube-react
 	url = https://github.com/malik-devops/minikube-react
+[submodule "minikube-django"]
+	path = minikube-django
+	url = https://github.com/malik-devops/minikube-django
