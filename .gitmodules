@@ -1,0 +1,3 @@
+[submodule "minikube-react"]
+	path = minikube-react
+	url = https://github.com/malik-devops/minikube-react
