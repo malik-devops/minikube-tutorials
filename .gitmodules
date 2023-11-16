@@ -7,3 +7,6 @@
 [submodule "minikube-angular"]
 	path = minikube-angular
 	url = https://github.com/malik-devops/minikube-angular
+[submodule "minkube-ionic"]
+	path = minkube-ionic
+	url = https://github.com/malik-devops/minikube-ionic
