@@ -26,6 +26,24 @@ Minikube is a tool designed to enable developers to run Kubernetes clusters loca
 Kubernetes is a powerful container orchestration platform that helps manage, deploy, and scale containerized applications.
 Minikube simplifies the process of setting up a local, single-node Kubernetes cluster for development and testing purposes.
 
+#### Commands
+
+To check if the deployment is running, you must type this command: 
+
+```kubectl get deploy -n <namespace>```
+
+To see the description of the deployment, type this command:
+
+```kubectl describe deploy <deploy-name> -n <namespace>```
+
+To remove deployment and service run this command:
+
+```kubectl delete deploy <deploy-name> -n <namespace>; kubectl delete svc <service-name> -n <namespace>```
+
+To see the logs of a pod run the command:
+
+```kubectl logs <pod-name> -n <namespace>```
+
 #### What You Will Learn:
 
 - Understand the basics of Kubernetes, a container orchestration platform.
@@ -62,7 +80,6 @@ to explore these key technologies and make your DevOps experience a rewarding ad
 - Log in to docker by executing this command: docker login.
 - Add the user name and access token that you can generate [here](https://hub.docker.com/settings/security).
 
-- 
 ##### Github
 
 - Add two variables on {repo}-> settings -> secrets -> actions to push the new image to docker hub after each git pipeline run.
@@ -70,4 +87,11 @@ to explore these key technologies and make your DevOps experience a rewarding ad
 ##### Minikube
 
 - Install minikube in your machine and make sure the installation was successful.
--  Create a namespace named 'project' or a name of your choice.
+- Create a namespace named 'project' or a name of your choice.
+- add secrets
+Kubernetes Secrets are secure objects that store sensitive data, such as passwords, OAuth tokens, and SSH keys, with encryption
+in clusters. To secure your docker credentials, update this command line by adding your username, email and password.
+
+```kubectl -n <namespace> create secret docker-registry registry-secret \ --docker-server=https://index.docker.io/v1/ \ --docker-username=<user-name> \ --docker-password=<user-name> \ --docker-email=<user-email>```
+
+
