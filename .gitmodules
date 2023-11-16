@@ -11,3 +11,6 @@
 [submodule "minkube-ionic"]
 	path = minkube-ionic
 	url = https://github.com/malik-devops/minikube-ionic
+[submodule "minikube-vue"]
+	path = minikube-vue
+	url = https://github.com/malik-devops/minikube-vue
